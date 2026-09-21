@@ -39,9 +39,9 @@ public class Main {
 
     @Override
     public void insertString(FilterBypass fb, int offset, String stringToAdd, AttributeSet attr)
-        throws BadLocationException
+            throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (isNumeric(stringToAdd)) {
         super.insertString(fb, offset, stringToAdd, attr);
       }
       else {
@@ -51,14 +51,34 @@ public class Main {
 
     @Override
     public void replace(FilterBypass fb, int offset, int lengthToDelete, String stringToAdd, AttributeSet attr)
-        throws BadLocationException
+            throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (isNumeric(stringToAdd)) {
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
       }
       else {
         Toolkit.getDefaultToolkit().beep();
       }
+    }
+
+    @Override
+    public void remove(FilterBypass fb, int offset, int length) throws BadLocationException {
+      super.remove(fb, offset, length);
+    }
+    private boolean isNumeric(String str) {
+      if (str == null) {
+        return false;
+      }
+      if (str.isEmpty()) {
+        return true;
+      }
+      for (int i = 0; i < str.length(); i++) {
+        if (!Character.isDigit(str.charAt(i))) {
+          return false;
+        }
+
+      }
+      return true;
     }
   }
 
@@ -175,11 +195,11 @@ public class Main {
   private static void showError(int code) {
     // Module 2 ticket: Show human-readable error messages.
     String[] explanations = {
-        "Please inform staff an unknown error occurred.",
-        "Please inform staff that database wasn't found.",
-        "Please show your card to staff to validate.",
-        "Please inform staff that status updates failed.",
-        "Please inform staff that log updates failed."
+            "Please inform staff an unknown error occurred.",
+            "Please inform staff that database wasn't found.",
+            "Please show your card to staff to validate.",
+            "Please inform staff that status updates failed.",
+            "Please inform staff that log updates failed."
     };
 
     labelReason.setText(explanations[code]);
