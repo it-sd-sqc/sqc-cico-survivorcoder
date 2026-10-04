@@ -62,3 +62,13 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * Should display "Developer" for the user name.
 
 
+# Module 6: Change color of application to look more professional
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+
+## Expected results
+* The colors of the application are clean, simple, and professional.
+
+
