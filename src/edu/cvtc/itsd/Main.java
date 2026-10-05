@@ -261,13 +261,19 @@ public class Main {
     panelMain.setMinimumSize(new Dimension(320, 240));
     panelMain.setPreferredSize(new Dimension(640, 480));
     panelMain.setMaximumSize(new Dimension(640, 480));
-    panelMain.setBackground(new Color(0, 204, 200, 50));
+    // Old color scheme:
+    // panelMain.setBackground(new Color(0, 204, 200, 50));
+    // New color scheme:
+    panelMain.setBackground(new Color(244, 244, 245, 255));
 
     panelMain.add(Box.createVerticalGlue());
     JLabel labelDirective = new JLabel("Scan card", JLabel.LEADING);
     labelDirective.setFont(fontMain);
     labelDirective.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelDirective.setForeground(Color.black);
+    // Old color scheme:
+    //labelDirective.setForeground(Color.cyan);
+    // New color scheme:
+    labelDirective.setForeground(new Color(24, 24, 27, 180));
     panelMain.add(labelDirective);
 
     fieldNumber = new JTextField();
@@ -276,8 +282,14 @@ public class Main {
     fieldNumber.setPreferredSize(new Dimension(200, 32));
     fieldNumber.setMaximumSize(new Dimension(200, 32));
     fieldNumber.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    fieldNumber.setBackground(Color.white);
-    fieldNumber.setForeground(Color.black);
+    // Old color scheme:
+    //fieldNumber.setBackground(Color.green);
+    // New color scheme:
+    fieldNumber.setBackground(new Color(24, 24, 27, 150));
+    // Old color scheme:
+    //fieldNumber.setForeground(Color.magenta);
+    // New color scheme:
+    fieldNumber.setForeground(Color.white);
     panelMain.add(fieldNumber);
 
     JButton updateButton = new JButton("Update");
@@ -294,19 +306,28 @@ public class Main {
     panelStatus.setMinimumSize(new Dimension(320, 240));
     panelStatus.setPreferredSize(new Dimension(640, 480));
     panelStatus.setMaximumSize(new Dimension(640, 480));
-    panelStatus.setBackground(new Color(0, 204, 200, 50));
+    // Old color scheme:
+    //panelStatus.setBackground(new Color(0, 204, 200, 50));
+    // New color scheme:
+    panelStatus.setBackground(new Color(228, 228, 231, 255));
 
     panelStatus.add(Box.createVerticalGlue());
     labelUser = new JLabel("Registrant", JLabel.LEADING);
     labelUser.setFont(fontMain);
     labelUser.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelUser.setForeground(new Color(51, 85, 250, 240));
+    // Old color scheme:
+    //labelUser.setForeground(new Color(51, 85, 250, 240));
+    // New color scheme:
+    labelUser.setForeground(Color.black);
     panelStatus.add(labelUser);
 
     labelState = new JLabel("updated", JLabel.LEADING);
     labelState.setFont(fontMain);
     labelState.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelState.setForeground(new Color(51, 153, 102, 220));
+    // Old color scheme:
+    //labelState.setForeground(new Color(51, 153, 102, 220));
+    // New color scheme:
+    labelState.setForeground(Color.darkGray);
     panelStatus.add(labelState);
 
     panelStatus.add(Box.createVerticalGlue());
@@ -317,7 +338,10 @@ public class Main {
     panelError.setMinimumSize(new Dimension(320, 240));
     panelError.setPreferredSize(new Dimension(640, 480));
     panelError.setMaximumSize(new Dimension(640, 480));
-    panelError.setBackground(new Color(215, 10, 0, 150));
+    // Old color scheme:
+    //panelError.setBackground(new Color(215, 10, 0, 150));
+    // New color scheme:
+    panelError.setBackground(new Color(113, 113, 122, 255));
 
     panelError.add(Box.createVerticalGlue());
     labelReason = new JLabel("", JLabel.LEADING);
