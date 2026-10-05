@@ -61,6 +61,23 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+#### Module 4-6, Ticket 401
+
+### Test steps for acceptable boundary check
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+
+## Expected results
+* Should display "Developer", "Checked In".
+* Wait 11 seconds, and display will return to entry screen.  
+
+### Test steps for non-valid letter entry
+1. Build and run CiCo.
+2  Enter abcdef
+
+## Expected results
+* Should not accept letter entry, should be an invalid entry.  
+
 
 # Module 6: Change color of application to look more professional
 
