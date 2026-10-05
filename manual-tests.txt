@@ -89,3 +89,14 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * The colors of the application are clean, simple, and professional.
 
 
+#### Module 6-7, Ticket 602
+
+## Test Steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+
+## Expected Results
+1.  Colors should now be more monochromatic scheme
+
+
+
